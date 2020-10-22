@@ -1,0 +1,69 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(-45deg, red, black 80%, yellow);
+}
+
+body {
+    overflow: hidden;
+}
+
+#div {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    height: 85vh;
+    margin: 0 5px;
+    transform: rotate(-1deg);
+}
+
+#div:hover #btn {
+    display: block;
+    animation-name: buttonAnimationOnMouseEnter;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards
+}
+
+#title {
+    margin-top: 20%;
+}
+
+#btn {
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    position: relative;
+    top: 30px;
+    cursor: pointer;
+    border: 1px solid white;
+    animation-name: buttonAnimationOnMouseLeave;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards
+}
+
+#btn:hover {
+    background-color: white;
+    color: black;
+}
+
+@keyframes buttonAnimationOnMouseEnter {
+    from {
+        opacity: 0;
+        transform: translate(0px, -50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes buttonAnimationOnMouseLeave {
+    from {
+        opacity: 1;
+        transform: translate(0, 0px);
+    }
+    to {
+        opacity: 0;
+        transform: translate(0, -50px);
+    }
+}
